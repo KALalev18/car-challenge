@@ -23,7 +23,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Reddit+Mono:wght@400;500&family=Unbounded:wght@500;600;700&display=swap"
         />
       </head>
-      <body>
+      {/* Browser extensions (Grammarly, ColorZilla) add attributes to <body> before React loads. */}
+      <body suppressHydrationWarning>
         <QueueProvider>
           <Shell>{children}</Shell>
         </QueueProvider>
