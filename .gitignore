@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.env
+.env.*
+!.env.example
+# Live demo state (decisions, agent runs). Reset with `npm run reset`.
+.state/

@@ -1,0 +1,32 @@
+{
+  "name": "bahn-control-room",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Car Delivery Control Room: a calm worklist for Bahn operations plus a real Journey agent for problems on the road.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "agent:run": "tsx scripts/run-agent.ts",
+    "queue": "tsx scripts/queue.ts",
+    "case": "tsx scripts/case.ts",
+    "reset": "tsx scripts/reset-state.ts",
+    "seed:save": "tsx scripts/save-seed.ts",
+    "check:packet": "python check_packet.py"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
+    "next": "16.4.3",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "tsx": "^4.23.15",
+    "typescript": "7.0.2"
+  }
+}
