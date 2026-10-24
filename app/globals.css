@@ -237,7 +237,7 @@ ul, ol { padding: 0; list-style: none; }
 .row-next .icon { margin-top: 2px; }
 .row-next.by-agent { color: var(--teal-ink); }
 .row-next.by-person { color: var(--ink); }
-.row-next span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.row-next span { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .row-foot { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
 
 .quiet-box { margin: 0 12px; padding: 14px; border-radius: 12px; background: var(--paper); box-shadow: var(--shadow-1); }

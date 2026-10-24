@@ -113,7 +113,7 @@ function Briefing({ data }: { data: CaseData }) {
       </span>
     </div>
     <p>{data.briefing.text}</p>
-    {data.triage.checks.length > 0 && <p className="briefing-checks"><Icon name="check" size={12} /> Checked: {data.triage.checks.join(" · ")}</p>}
+    {data.triage.checks.length > 0 && (data.triage.bucket === "quiet" || data.triage.bucket === "watch") && <p className="briefing-checks"><Icon name="check" size={12} /> Checked: {data.triage.checks.join(" · ")}</p>}
   </section>
 }
 
