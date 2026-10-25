@@ -248,7 +248,8 @@ function windowId(bundle: Bundle, purpose: string): string | null {
 function buildFacts(bundle: Bundle, now: string): FactRow[] {
   const facts: FactRow[] = []
   const windows = chosenWindows(bundle)
-  const { keyDates } = deriveKeyDates(bundle)
+  // Bahn's layer reads "now" from the snapshot; the facts say "in 3 h" against the demo clock, like the worklist.
+  const { keyDates } = deriveKeyDates({ ...bundle, snapshotAt: now })
   const { pickedUpAt, deliveredAt } = milestones(bundle)
   const lane = bundle.order.lane
   const promiseDate = keyDates.find((date) => date.key === "promise")
