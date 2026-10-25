@@ -2517,7 +2517,7 @@
     },
     {
      "role": "user",
-     "content": "[The operator asked you to look at this case again at 2026-10-21T11:04:03.506Z]\nWhy it is flagged now: The Journey agent stopped before finishing: ENOENT: no such file or directory, rename 'C:\\Users\\Krist\\OneDrive\\Работен плот\\car-delivery\\car-challenge\\.state\\overlay.json.tmp' -> 'C:\\Users\\Krist\\OneDrive\\Работен плот\\car-delivery\\car-challenge\\.state\\overlay.json' Suggested next step on record: Take the case over, or ask the agent to continue.\n(Current time 2026-10-21T11:04:03.530Z. Permissions: ask drivers and non-customer sites questions; NOT closing alerts (say when one could be closed); NOT holding sailings (name the sailing in your proposal); never: bookings, dates, promises, costs, driver changes, or contacting the customer (always propose).)"
+     "content": "[The operator asked you to look at this case again at 2026-10-21T11:04:03.506Z]\nWhy it is flagged now: The Journey agent stopped before finishing: ENOENT: no such file or directory, rename '<repo>\\.state\\overlay.json.tmp' -> '<repo>\\.state\\overlay.json' Suggested next step on record: Take the case over, or ask the agent to continue.\n(Current time 2026-10-21T11:04:03.530Z. Permissions: ask drivers and non-customer sites questions; NOT closing alerts (say when one could be closed); NOT holding sailings (name the sailing in your proposal); never: bookings, dates, promises, costs, driver changes, or contacting the customer (always propose).)"
     },
     {
      "role": "assistant",
@@ -2668,7 +2668,7 @@
      "at": "2026-10-21T11:03:23.593Z",
      "kind": "error",
      "label": "Stopped with an error; a person should take over",
-     "detail": "ENOENT: no such file or directory, rename 'C:\\Users\\Krist\\OneDrive\\Работен плот\\car-delivery\\car-challenge\\.state\\overlay.json.tmp' -> 'C:\\Users\\Krist\\OneDrive\\Работен плот\\car-delivery\\car-challenge\\.state\\overlay.json'"
+     "detail": "Could not save its work because the state file was busy. Ask it to continue, or take the case yourself."
     },
     {
      "kind": "read",

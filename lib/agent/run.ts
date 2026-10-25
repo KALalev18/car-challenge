@@ -78,12 +78,22 @@ async function drain(orderId: string) {
         if (!run) return
         run.status = "error"
         run.statusText = "The agent stopped with an error"
-        run.error = message
+        run.error = plainError(message)
         run.updatedAt = world().now
-        run.steps.push({ id: `step-${run.steps.length + 1}`, at: world().now, kind: "error", label: "Stopped with an error; a person should take over", detail: message })
+        run.steps.push({ id: `step-${run.steps.length + 1}`, at: world().now, kind: "error", label: "Stopped with an error; a person should take over", detail: `${run.error} Ask it to continue, or take the case yourself.` })
       })
     }
   }
+}
+
+/** What an operator sees when a run fails. The raw error stays in the server log. */
+function plainError(message: string): string {
+  if (/401|403|api key|authentication|unauthori[sz]ed/i.test(message)) return "The model service did not accept the API key."
+  if (/402|credit|insufficient|quota/i.test(message)) return "The model service account is out of credit."
+  if (/429|rate.?limit|overloaded|529/i.test(message)) return "The model service was busy."
+  if (/ENOTFOUND|ECONNRESET|ECONNREFUSED|ETIMEDOUT|fetch failed|timeout|network/i.test(message)) return "Could not reach the model service."
+  if (/EPERM|ENOENT|EBUSY|EACCES/.test(message)) return "Could not save its work because the state file was busy."
+  return "Something went wrong inside the agent."
 }
 
 function permissionText(permissions: Permissions): string {
