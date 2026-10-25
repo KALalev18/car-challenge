@@ -4,7 +4,7 @@
 
 Built for Bahn's *Car Delivery Control Room* challenge at the Prompt Operations Hackathon, 24–25 October 2026. Everything in it is fictional: the 100 orders come from Bahn's synthetic packet, and the drivers who answer the agent are simulated.
 
-![The worklist and an open case](docs/screenshots/worklist.png)
+![The worklist and an open case](docs/screenshots/1-worklist.png)
 
 ## Run it
 

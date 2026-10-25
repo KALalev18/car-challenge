@@ -6,7 +6,7 @@
 - Demo video: `<link>` ← replace
 - Run it: `npm install && cp .env.example .env.local && npm run dev` (Node 24; add an Anthropic key for the live agent). No database or Docker.
 
-![The worklist and an open case](screenshots/worklist.png)
+![The worklist and an open case](screenshots/1-worklist.png)
 
 ## The problem we designed for
 
